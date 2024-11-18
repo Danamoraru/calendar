@@ -58,7 +58,8 @@ justify-content: space-between;
 .datepicker-calendar {
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    gap: 1rem;
+    row-gap: 0.5rem;
+    
 }
 .day, date{
     justify-self: center;
@@ -71,9 +72,8 @@ justify-content: space-between;
 }
 .date{
     border: 0;
-    padding: 0;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 3.5rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,46 +143,33 @@ justify-content: space-between;
 .datepicker-calendar {
     display: grid;
     grid-template-columns: repeat(7,1fr);
-    gap: 1rem;
+    row-gap:0.5rem;
     
 }
-.day, date{
-    justify-self: center;
-}
-.day{
-    color: black;
-    font-size: 0.875em;
-    font-weight: 500;
-    justify-self: center;
-}
-.date{
-    border: 0;
-    padding: 0;
-    width: 2.25rem;
-    height: 2.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    font-weight: 600;
-    border: 2px solid transparent;
-    border-color: transparent;
-    cursor: pointer;
-}
+
 .date:focus{
     outline: 0;
     color: var(--c-theme-primary);
     border: 2px solid var(--c-theme-primary-accent);
 }
+.date:hover, .day:hover{
+background-color: rgb(112, 164, 248);
+
+}
 .past{
     color: #7c8287;
+    pointer-events: none;
+cursor: default;
+    
+    
 }
+
 .sem{
     border: 2px solid rgb(93, 161, 184);
 }
 .faded{
      color: blue;
-     background-color: #008ffd;
+     background-color: #57c2dd77;
 }
 .current-day{
   color: #fff;
